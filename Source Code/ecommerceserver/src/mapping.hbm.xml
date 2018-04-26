@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="ecommerceserver.customer" table="customer">
+<id name="cid" column="cid" type="integer">
+<generator class="increment"></generator>
+</id>
+<property name="firstname" column="firstname" type="string"></property>
+<property name="lastname" column="lastname" type="string"></property>
+<property name="email" column="email" type="string"></property>
+<property name="password" column="password" type="string"></property>
+<property name="lastlogin" column="lastlogin" type="timestamp"></property>
+<property name="failedlogin" column="failedlogin" type="integer"></property>
+<property name="location" column="location" type="string"></property>
+</class>
+
+
+<class name="ecommerceserver.orders" table="orders">
+      <id name="orderid" type="int" column="orderid">
+         <generator class="increment"/>
+      </id>
+      <property name="productid" column="productid" type="string"/>
+      <property name="cid" column="cid" type="int"/>
+      <property name="status" column="status" type="string"/>
+      <property name="quantity" column="quantity" type="integer"/>
+      <property name="shippingaddress" column="shippingaddress" type="string"/>
+      <property name="orderdate" column="orderdate" type="date"/>
+      <property name="deliverydate" column="deliverydate" type="date"/>
+   </class>
+   
+   
+     
+   <class name="ecommerceserver.product" table="product">
+      <id name="productid" type="string" column="productid">
+         <generator class="native"/>
+      </id>
+      <property name="name" column="name" type="string"/>
+      <property name="description" column="description" type="string"/>
+      <property name="category" column="category" type="integer"/>
+      <property name="brand" column="brand" type="string"/>
+      <property name="color" column="color" type="string"/>
+      <property name="price" column="price" type="float"/>
+      <property name="quantity" column="quantity" type="integer"/>
+      <property name="discount" column="discount" type="float"/>
+      <property name="rating" column="rating" type="float"/>
+   </class>
+
+
+	<class name="ecommerceserver.cart" table="cart">
+		<composite-id name="key">
+			<key-property name="productid" column="product_id" type="string" />
+			<key-property name="custemail" column="cust_email" type="string" />
+		</composite-id>
+		<property name="name" type="string">
+			<column name="name" />
+		</property>
+		<property name="quantity" type="int">
+			<column name="quantity" />
+		</property>
+		<property name="price" type="float">
+			<column name="price" />
+		</property>
+	</class>
+	
+	
+
+
+
+
+   
+</hibernate-mapping>

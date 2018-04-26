@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="ecommerceserver.customer" table="customer">
+<id name="cid" column="cid" type="integer">
+<generator class="increment"></generator>
+</id>
+<property name="firstname" column="firstname" type="string"></property>
+<property name="lastname" column="lastname" type="string"></property>
+<property name="email" column="email" type="string"></property>
+<property name="password" column="password" type="string"></property>
+<property name="lastlogin" column="lastlogin" type="timestamp"></property>
+<property name="failedlogin" column="failedlogin" type="integer"></property>
+</class>
+   
+
+
+	<class name="integratedprojectserver.cart" table="cart">
+		<composite-id name="key">
+			<key-property name="postid" column="postid" type="string" />
+			<key-property name="cid" column="cid" type="string" />
+		</composite-id>
+		<property name="postdesc" column="postdesc" type="string"></property>
+		
+	</class>
+
+
+
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 1, 2016 9:50:50 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="ecommerceserver.bid" table="BID">
+        <id name="bidid" type="int">
+            <column name="BIDID" />
+            <generator class="assigned" />
+        </id>
+        <property name="postid" type="int">
+            <column name="POSTID" />
+        </property>
+        <property name="cid" type="int">
+            <column name="CID" />
+        </property>
+        <property name="bidderemail" type="java.lang.String" access="field">
+            <column name="BIDDEREMAIL" />
+        </property>
+        <property name="biddesc" type="java.lang.String" access="field">
+            <column name="BIDDESC" />
+        </property>
+        <property name="quantity" type="int">
+            <column name="QUANTITY" />
+        </property>
+        <property name="price" type="float">
+            <column name="PRICE" />
+        </property>
+        <property name="createdat" type="java.util.Date">
+            <column name="CREATEDAT" />
+        </property>
+    </class>
+</hibernate-mapping>
