@@ -1,0 +1,204 @@
+#display{
+	padding-top:100px; 
+}
+
+#image{
+	width: 300px;
+	height: 450px;
+}
+
+#right{
+	float:right;
+}
+#cartIcon{
+	color: black;
+}
+.center{
+	text-align: center;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+#name{
+	font-size: 16px;
+    line-height: 2;
+}
+
+#brand{
+	font-weight: bold;
+	font-size: 20px;
+    line-height: 3;
+}
+
+
+div .red{
+	color: red;	
+/* 	font-weight: bold; */
+}
+
+div #margin{
+	margin-top: 10px;
+	float:left;
+}
+
+div .textWrap{
+	border-radius: 10px;
+    border: 2px solid #73AD21;
+	word-wrap: break-word;
+	text-align: center;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+div #discount {
+	text-decoration: line-through;
+/* 	opacity: ; */
+/* 	color: red; */
+}
+
+#firstreview{
+	text-decoration: underline;
+	color: blue;
+}
+
+.tooltip{
+    font-size: 10px;
+    position:absolute;
+    z-index: 999;
+    white-space:nowrap;
+    bottom:9999px;
+    left: 50%;
+    background:#000;
+    color:#e0e0e0;
+    padding:0px 7px;
+    line-height: 24px;
+    height: 24px;
+     
+    opacity: 0; 
+    transition:opacity 0.4s ease-out; 
+    }       
+     
+.tooltip::before {
+    content: "";
+    display: block;
+    border-left: 6px solid #000000;
+    border-top: 6px solid transparent;
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    }
+     
+.tooltip:hover span {
+    opacity: 1;
+    bottom:-35px;
+    }
+
+
+/* full stars */
+/* half stars are obtained when the percentage is decreased */
+
+#ratingsForm{
+	float:left;
+}
+
+form .stars {
+  background: url("Stars/stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+}
+
+form .stars input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* fullstars */
+
+form .fullstars input[type="radio"].star-5:checked ~ span {
+  width: 100%;
+}
+form .fullstars input[type="radio"].star-4:checked ~ span {
+  width: 80%;
+}
+form .fullstars input[type="radio"].star-3:checked ~ span {
+  width: 60%;
+}
+form .fullstars input[type="radio"].star-2:checked ~ span {
+  width: 40%;
+}
+form .fullstars input[type="radio"].star-1:checked ~ span {
+  width: 20%;
+}
+
+/* 4.5 stars */
+
+form .stars_45 input[type="radio"].star-5:checked ~ span {
+  width: 90%;
+}
+/* 3.5 stars */
+form .stars_35 input[type="radio"].star-4:checked ~ span {
+  width: 70%;
+}
+/* 2.5 stars */
+form .stars_25 input[type="radio"].star-3:checked ~ span {
+  width: 50%;
+}
+/* 1.5 stars */
+form .stars_15 input[type="radio"].star-2:checked ~ span {
+  width: 30%;
+}
+/* 0.5 stars */
+form .stars_05 input[type="radio"].star-1:checked ~ span {
+  width: 10%;
+}
+
+form .stars label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0!important;
+  padding: 0!important;
+  text-indent: -999em;
+  float: left;
+  position: relative;
+  z-index: 10;
+  background: transparent!important;
+  cursor: pointer;
+}
+/*
+form .stars label:hover ~ span {
+  background-position: 0 -30px;
+}
+form .stars label.star-5:hover ~ span {
+  width: 100% !important;
+}
+form .stars label.star-4:hover ~ span {
+  width: 80% !important;
+}
+form .stars label.star-3:hover ~ span {
+  width: 60% !important;
+}
+form .stars label.star-2:hover ~ span {
+  width: 40% !important;
+}
+form .stars label.star-1:hover ~ span {
+  width: 20% !important;
+}*/
+
+form .stars span {
+  display: block;
+  width: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  background: url("Stars/stars.png") repeat-x 0 -60px;
+  -webkit-transition: -webkit-width 0.5s;
+  -moz-transition: -moz-width 0.5s;
+  -ms-transition: -ms-width 0.5s;
+  -o-transition: -o-width 0.5s;
+  transition: width 0.5s;
+}

@@ -1,0 +1,220 @@
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+.right{
+	float:right;
+}
+
+#display{
+	padding-top: 200px;
+}
+
+.image{
+	width:100px;
+	height: 200px;
+}
+
+div .red{
+	color: red;	
+/* 	font-weight: bold; */
+}
+
+div #margin{
+	margin-top: 10px;
+}
+
+div #textWrap{
+	height: 350px;
+	border-radius: 10px;
+    border: 2px solid #73AD21;
+	word-wrap: break-word;
+	text-align: center;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+div #discount {
+	text-decoration: line-through;
+/* 	opacity: ; */
+/* 	color: red; */
+}
+
+#firstreview{
+	text-decoration: underline;
+	color: blue;
+}
+
+.tooltip{
+    font-size: 10px;
+    position:absolute;
+    z-index: 999;
+    white-space:nowrap;
+    bottom:9999px;
+    left: 50%;
+    background:#000;
+    color:#e0e0e0;
+    padding:0px 7px;
+    line-height: 24px;
+    height: 24px;
+     
+    opacity: 0; 
+    transition:opacity 0.4s ease-out; 
+    }       
+     
+.tooltip::before {
+    content: "";
+    display: block;
+    border-left: 6px solid #000000;
+    border-top: 6px solid transparent;
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    }
+     
+.tooltip:hover span {
+    opacity: 1;
+    bottom:-35px;
+    }
+
+
+/* full stars */
+/* half stars are obtained when the percentage is decreased */
+
+#ratingsForm{
+	float:left;
+}
+
+form .stars {
+  background: url("Stars/stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+}
+
+form .stars input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* fullstars */
+
+form .fullstars input[type="radio"].star-5:checked ~ span {
+  width: 100%;
+}
+form .fullstars input[type="radio"].star-4:checked ~ span {
+  width: 80%;
+}
+form .fullstars input[type="radio"].star-3:checked ~ span {
+  width: 60%;
+}
+form .fullstars input[type="radio"].star-2:checked ~ span {
+  width: 40%;
+}
+form .fullstars input[type="radio"].star-1:checked ~ span {
+  width: 20%;
+}
+
+/* 4.5 stars */
+
+form .stars_45 input[type="radio"].star-5:checked ~ span {
+  width: 90%;
+}
+/* 3.5 stars */
+form .stars_35 input[type="radio"].star-4:checked ~ span {
+  width: 70%;
+}
+/* 2.5 stars */
+form .stars_25 input[type="radio"].star-3:checked ~ span {
+  width: 50%;
+}
+/* 1.5 stars */
+form .stars_15 input[type="radio"].star-2:checked ~ span {
+  width: 30%;
+}
+/* 0.5 stars */
+form .stars_05 input[type="radio"].star-1:checked ~ span {
+  width: 10%;
+}
+
+form .stars label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0!important;
+  padding: 0!important;
+  text-indent: -999em;
+  float: left;
+  position: relative;
+  z-index: 10;
+  background: transparent!important;
+  cursor: pointer;
+}
+/*
+form .stars label:hover ~ span {
+  background-position: 0 -30px;
+}
+form .stars label.star-5:hover ~ span {
+  width: 100% !important;
+}
+form .stars label.star-4:hover ~ span {
+  width: 80% !important;
+}
+form .stars label.star-3:hover ~ span {
+  width: 60% !important;
+}
+form .stars label.star-2:hover ~ span {
+  width: 40% !important;
+}
+form .stars label.star-1:hover ~ span {
+  width: 20% !important;
+}*/
+
+form .stars span {
+  display: block;
+  width: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  background: url("Stars/stars.png") repeat-x 0 -60px;
+  -webkit-transition: -webkit-width 0.5s;
+  -moz-transition: -moz-width 0.5s;
+  -ms-transition: -ms-width 0.5s;
+  -o-transition: -o-width 0.5s;
+  transition: width 0.5s;
+}
+
+.searchbox{
+	display: table-cell;
+	align:center;
+	position: relative;
+    z-index: 2;
+    float: left;
+    width: 80%;
+    margin-bottom: 0;
+	height: 34px;
+    padding: 6px 12px;
+	padding-bottom:10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+#searchdiv{
+	padding-top:10px;
+	width:50%;
+	margin:auto;
+	display:block;
+}
+
+#go{
+	float:right;
+	height: 37px;
+}
